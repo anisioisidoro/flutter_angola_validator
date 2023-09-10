@@ -30,11 +30,18 @@ angola_validator: ˆ0.0.1
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+# validateBI
+
+O método validateBI é uma função que realiza uma validação do número do Bilhete de Identidade (BI) por meio de uma requisição a uma API externa. O objetivo principal deste método é verificar a validade do número do BI, consultando uma fonte de dados externa.
 
 ```dart
-const like = 'sample';
+try {
+  String biNumber = "1234567890"; // Substitua pelo número de BI que deseja validar.
+  String validationState = await validateBI(biNumber);
+  print("Estado de validação do BI: $validationState");
+} catch (e) {
+  print("Ocorreu um erro durante a validação do BI: $e");
+}
 ```
 
 ## Additional information
