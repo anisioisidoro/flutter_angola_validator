@@ -3,6 +3,14 @@ description: Package para validação  de Bilhete de Identidade(BI), matrícula 
 version: 0.0.1
 homepage: https://github.com/anisioisidoro/flutter_angola_validator
 
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  web:
+  windows:
+
 environment:
   sdk: '>=3.0.3 <4.0.0'
   flutter: ">=1.17.0"
