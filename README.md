@@ -28,9 +28,9 @@ angola_validator: ˆ0.0.1
 ```
 
 
-## Usage
+# Usage
 
-# validateBI
+## validateBI
 
 O método validateBI é uma função que realiza uma validação do número do Bilhete de Identidade (BI) por meio de uma requisição a uma API externa. O objetivo principal deste método é verificar a validade do número do BI, consultando uma fonte de dados externa.
 
