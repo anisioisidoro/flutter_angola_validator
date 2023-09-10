@@ -1,7 +1,7 @@
 name: angola_validator
 description: Package para validação  de Bilhete de Identidade(BI), matrícula e IBAN angolano.
 version: 0.0.1
-homepage:
+homepage: https://github.com/anisioisidoro/flutter_angola_validator
 
 environment:
   sdk: '>=3.0.3 <4.0.0'
