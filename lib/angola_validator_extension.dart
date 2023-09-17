@@ -1,7 +1,7 @@
 library angola_validator;
 
 
-extension AngolaValidatorExntension on String {
+extension AngolaValidatorExtension on String {
   bool validateVehicleRegistration() {
     const regex = r'^[A-Z]{2}-\d{2}-\d{2}-[A-Z]{2}$|^[A-Z]{3}-\d{2}-\d{2}$';
     RegExp(regex).hasMatch(this);
