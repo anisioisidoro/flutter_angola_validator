@@ -63,13 +63,13 @@ extension AngolaValidatorExtension on String {
       return "IBAN inválido. O código desse banco é inválido";
     }
 
-    if (_parseIBAN(iban) != 1) {
+    if (_calculateIBANChecksum(iban) != 1) {
       return "IBAN inválido, por favor insira um IBAN válido";
     }
     return '';
   }
 
-  int _parseIBAN(String iban) {
+  int _calculateIBANChecksum(String iban) {
     String ibanWithoutPrefix = iban.substring(4);
     String numericIban = ibanWithoutPrefix.replaceAll(RegExp(r'[^0-9]'), '');
 
