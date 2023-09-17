@@ -1,6 +1,5 @@
 library angola_validator;
 
-
 extension AngolaValidatorExtension on String {
   bool validateVehicleRegistration() {
     const regex = r'^[A-Z]{2}-\d{2}-\d{2}-[A-Z]{2}$|^[A-Z]{3}-\d{2}-\d{2}$';
@@ -16,7 +15,11 @@ extension AngolaValidatorExtension on String {
     }
 
     if (iban.length != 25) {
-      return "IBAN inválido, por favor insira um IBAN válido";
+      return "IBAN inválido. O tamanho deve ser de 25 caracteres";
+    }
+
+    if (!iban.startsWith("AO06")) {
+      return "IBAN inválido. Adicione o código AO06";
     }
 
     if (_parseIBAN(iban) != 1) {
