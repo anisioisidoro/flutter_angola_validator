@@ -33,6 +33,9 @@ extension AngolaValidatorExtension on String {
   }
 
   int _parseIBAN(String iban) {
-    return int.parse(iban) % 97;
+    String ibanWithoutPrefix = iban.substring(4);
+    String numericIban = ibanWithoutPrefix.replaceAll(RegExp(r'[^0-9]'), '');
+
+    return int.parse(numericIban) % 97;
   }
 }
