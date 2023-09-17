@@ -9,12 +9,13 @@ extension AngolaValidatorExtension on String {
   }
 
   String validateIBAN() {
+    String iban = replaceAll(".", "").replaceAll(" ", "");
+
     if (isEmpty) {
       return "IBAN inválido, por favor insira um IBAN válido";
     }
-    String iban = replaceAll(".", "").replaceAll(" ", "");
 
-    if (iban.length < 21) {
+    if (iban.length != 25) {
       return "IBAN inválido, por favor insira um IBAN válido";
     }
 
