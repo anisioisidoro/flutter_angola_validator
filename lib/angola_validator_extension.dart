@@ -22,6 +22,10 @@ extension AngolaValidatorExtension on String {
       return "IBAN inválido. Adicione o código AO06";
     }
 
+    if (!iban.substring(4).contains(RegExp(r'^[0-9]+$'))) {
+      return "IBAN inválido. Não deve conter letras após AO06";
+    }
+
     if (_parseIBAN(iban) != 1) {
       return "IBAN inválido, por favor insira um IBAN válido";
     }
