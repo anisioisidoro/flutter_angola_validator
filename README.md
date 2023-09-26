@@ -59,7 +59,7 @@ Este método verifica se o valor fornecido representa um número de Identificaç
 Exempolo: 
 
 ```dart
-String iban = "000600000005291010176"; // Substitua pelo IBAN que deseja validar.
+String iban = "AO06004000001089424410175"; // Substitua pelo IBAN que deseja validar.
 String validationMessage = iban.validateIBAN();
 if (validationMessage.isEmpty) {
   print("O IBAN é válido.");
@@ -67,4 +67,6 @@ if (validationMessage.isEmpty) {
   print("Erro de validação do IBAN: $validationMessage");
 }
 ```
+
+Agredeço o [Epifanio Francisco](https://github.com/epifaniofrancisco) pela contribuição
 
